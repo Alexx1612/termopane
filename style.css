@@ -1,0 +1,478 @@
+html{
+  scroll-behavior: smooth;
+}
+
+      body{
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #001220;
+        color: white;
+        font-size: clamp(0.2rem, 0.2rem + 1vw, 1rem);
+      }
+      h1{
+        font-size: clamp(1rem, 2vw + 1rem, 2rem);
+      }
+      h2{
+        font-size: clamp(0.5rem, 0.5rem + 2vw, 2rem);
+        background: linear-gradient(rgb(0, 150, 150), rgb(50, 175, 250));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-left: 20%;
+      }
+      h3{
+        font-size: clamp(0.5rem, 0.5rem + 2vw, 2rem);
+        background: linear-gradient(rgb(0, 150, 150), rgb(50, 175, 250));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .headertop {
+        position: fixed;  top: 0px;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        height: clamp(2rem, 2rem + 2vw, 5rem);   
+        background-image: linear-gradient( rgb(0, 50, 100), rgb(33, 0, 50));
+        font-size: clamp(0.1rem, 0.5rem + 1vw, 1rem);
+      }
+          .meniu ul li{
+           list-style: none;
+           display: inline-block;   
+           padding-left: 0px; 
+          }
+          .meniu ul li a{
+            text-decoration: none;
+            color: white;
+           }
+           .meniu ul li a:hover{
+            text-decoration: underline;
+            color: rgb(255, 255, 255);
+           }
+          .mail{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: clamp(2px, 2px + 10dvl , 20px);
+            padding-left: 50rem;
+            margin-top: 10px;
+          }
+          .phone{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: clamp(5px, 5px + 10dvl , 10px) ;
+            color: gray;
+            margin-top: 10px;
+          }
+
+      .despre{
+       padding-top: 50px;
+       padding-left: 10%;
+       padding-bottom: 50dvw;
+       padding-right: clamp(10dvw , 10dvw + 10px , 400px);
+       margin-top: clamp(2rem, 2rem + 2vw, 5rem); ;
+       background-image: url(waves1.svg);
+       background-size: clamp(150dvw , 150dvw + 750px, 500dvw);
+       background-repeat: no-repeat;
+       font-size: clamp(0.5dvw, 0.5dvw + 0.75rem, 2dvw);
+      }
+      .slideshow{
+        margin-bottom: 50dvw;
+        margin-left: 17.5%;
+
+        width: clamp(50dvw, 50dvw + 10rem,140dvw);
+        height: clamp(30dvw, 30dvw + 10rem,80dvw);
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+      }
+       .slides{
+         width: 500%;
+         height: clamp(30dvw, 30dvw + 10rem,140dvw);
+         display: flex;
+        }
+       .slides input{
+         display: none;
+        }
+       .slide{
+         width: 20%;
+         transition: 3s;
+        }
+       .slide img{
+       
+         width: clamp(50dvw, 50dvw + 10rem,140dvw);
+         height: clamp(30dvw, 30dvw + 10rem,80dvw);
+        }
+         .manual-navigation{
+           width: clamp(50dvw, 50dvw + 10rem,140dvw);
+           margin-top: -40px;
+           display: flex;
+           justify-content: center;
+          }
+         .manual-button{
+           border: 3.5px solid rgb(255, 255, 255);;
+           padding: 8px;
+           border-radius: 10px;
+           cursor: pointer;
+           transition: 0.5s;
+          }
+         .manual-button:not(:last-child){
+           margin-right: 40px;
+          }
+         .manual-button:hover{
+           background-color: darkcyan;
+          }   
+        #radiobutton1:checked ~ .first{
+         margin-left: 0;
+        }
+        #radiobutton2:checked ~ .first{
+         margin-left: -20%;
+        }
+        #radiobutton3:checked ~ .first{
+         margin-left: -40%;
+        }
+        #radiobutton4:checked ~ .first{
+         margin-left: -60%;
+        }
+        #radiobutton5:checked ~ .first{
+         margin-left: -80%;
+        }
+
+         .auto-navigation{
+           position: absolute;
+           display: flex;
+           width: clamp(50dvw, 50dvw + 10rem ,140dvw);
+           justify-content: center;
+           margin-top: 460px;
+         }
+         .auto-navigation div{
+           border: 2px solid rgb(150, 150, 255);
+           padding: 5px;
+           border-radius: 10px;
+           transition: 1s;
+         }
+         .auto-navigation div:not(:last-child){
+          margin-right: 40px;
+         }
+        #radiobutton2:checked ~ .auto-navigation .auto2{
+          background: rgb(150, 150, 255);
+        }
+        #radiobutton3:checked ~ .auto-navigation .auto3{
+          background: rgb(150, 150, 255);
+        }
+        #radiobutton4:checked ~ .auto-navigation .auto4{
+          background: rgb(150, 150, 255);
+        }
+        #radiobutton5:checked ~ .auto-navigation .auto5{
+          background: rgb(150, 150, 255);
+        }
+
+      .calculator{
+        margin-bottom: 50dvw;
+        margin-right: 55dvw;
+        border: 2px solid cyan;
+        border-radius: 10px;
+        margin-left: 5vw; 
+        background-color: rgba(0,0,0,0.4);
+      }
+      .container {
+        background:rgb(100, 100, 100,0.5);
+        margin-top: 10px;
+        display: flex;
+        flex-direction: flex;
+        align-items: center;
+        padding-left: 70px;
+        width: 25vw;
+      }
+      input[type="number"] {
+        width: 10vw;
+        height: 3vw;
+        padding: 10px;
+        margin: 20px;
+        border: 2px solid rgb(100, 100, 100);
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type="button"] {
+        background-color: #02ae05;
+        width: 10vw;
+        height: 3vw;
+        color: rgb(50, 0, 0);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1vw;
+      }
+      #output {
+        margin-top: 30px;
+        font-size: 30px;
+        font-weight: bold;      
+      }
+
+      .contact{
+        font-size: clamp(1dvw,1dvw + 10px,2dvw);
+        padding-top: 175px;
+        height: 20dvw;
+        background-image: url(waves2.svg);
+        background-position: 0% ;
+        background-size: clamp(100dvw , 100dvw + 250px, 200dvw);
+        background-repeat: no-repeat;
+        padding-left: 10%;
+      }
+
+
+
+      @media (max-width: 1500px){
+        .mail{
+         padding-left: 35rem;
+        }
+        .contact{
+          padding-top: 100px;
+        }
+       }
+
+      @media (max-width: 1200px){
+       .mail{
+        padding-left: 25rem;
+       }
+       .despre{
+        padding-top: 20px;
+        padding-right: 50px;
+        background-size: clamp(150dvw , 150dvw + 2000px, 300dvw);
+        font-size: clamp(0.5dvw, 0.5dvw + 2rem, 2dvw);
+       }
+       .contact{
+        padding-top: 50px;
+        font-size: clamp(2dvw,2dvw + 25px,3dvw);
+        height: 40dvw;
+        background-position-y:100%;
+        background-size: 210%;
+      }
+      }
+
+      @media (max-width: 1040px){        
+        .meniu{
+          margin-left: -35px;
+          font-size: 3.5dvl;
+        }
+        .mail{
+          font-size: 0.5dvw + 5px;
+          padding-left: 10px;
+          margin-top: 4px;
+        }
+        .phone{
+          font-size: 1.5dvw + 5px;
+          margin-top: 5px;
+          padding-top: 2px;
+        }
+        .slideshow{
+          margin-left: 10%;
+        }
+        .calculator{
+          margin-right: 30dvw;
+          height: 50vw;
+        }
+        .container{
+         width: 32.5vw;
+         font-size: 2vw;
+        }
+        input[type="button"] {
+          font-size: 1.5vw;
+          width: 15vw;
+          height: 5vw;
+          }
+        .label{
+          font-size: 20vw;
+        }
+        h3{
+          padding-left: 5%;
+        }
+      }
+
+      @media (max-width: 700px){
+         .despre{
+          padding-top: 20px;
+          padding-right: 50px;
+          background-size: clamp(225dvw , 225dvw + 1000px, 350dvw);
+          font-size: clamp(0.5dvw, 0.5dvw + 2rem, 2dvw);
+         }
+         .manual-button{
+          border: 2px solid rgb(255, 255, 255);;
+          padding: 8px;
+          border-radius: 10px;
+         }
+         .manual-navigation{
+          margin-top: -30px;
+         }
+         .manual-button:not(:last-child){
+          margin-right: 20px;
+         }
+         .calculator{
+          margin-right: 40dvw;
+          height: 50vw;
+        }
+        .container{
+         padding-left: 5vw;
+         width: 40vw;
+         height: 25vw;
+        }
+        input[type="button"] {
+        font-size: 2vw;
+        width: 15vw;
+        height: 5vw;
+        padding: 0;
+        }
+        input[type="number"] {
+          padding: 0;
+          border-radius: 2px;
+          font-size: 2vw;
+          margin: 10px;
+        }
+      }
+
+      @media (max-width: 500px){  
+        .meniu{
+          margin-left: -35px;
+          margin-top: 5px;
+          font-size: 2.5dvw;
+        }
+        .mail{
+          font-size: 2dvw;
+        padding-left: 10dvw;
+        margin-top: 12px;
+        }
+        .phone{
+          font-size: 2dvw;
+          margin-top: 5px;
+          padding-top: 7px;
+        }
+        .despre{
+          padding-bottom: 300px;
+          padding-right: 10px;
+          font-size: clamp(1dvw, 1dvw + 1rem, 4dvw);
+          background-size: clamp(200dvw , 200dvw + 3500px, 700dvw);
+        }
+        .slideshow{
+          margin-left: 5%;
+        }
+        h3{
+          padding-left: 10%;
+        }
+        .calculator{
+          margin-right: 15dvw;
+          height: 65vw;
+          font-size: 10px;
+        }
+        .container{
+         padding-left: 7.5vw;
+         width: 50vw;
+         height: 35vw;
+         font-size: 12px;
+        }
+        
+        input[type="number"] {
+          width: 14vw;
+          height: 6vw;
+          border: 0.5px solid rgb(100, 100, 100);
+          margin: 2vw;
+        }
+        .contact{
+          padding-top: 10px;
+          font-size: clamp(2dvw,2dvw + 35px,3dvw);
+          height: 32dvw;
+          background-position-y:100%;
+          background-size: 150%;
+        }
+        .manual-button{
+        margin: 10px;
+        }
+      }
+
+      @media (max-width: 355px){
+        .meniu{
+          margin-left: -35px;
+          margin-top: 10px;
+          font-size: 7px;
+        }
+        .mail{
+          font-size: 6px;
+        padding-left: 5px;
+        margin-top: 15px;
+        }
+        .phone{
+          font-size: 6px;
+          padding-top: 10px;
+        }
+        .despre{
+          padding-top: 10px;
+          padding-left: 5px;
+          padding-right: 5px;
+          padding-bottom: 50vl;
+          margin-right: 10vw;
+          background-size: clamp(200dvw , 200dvw + 3500px, 850dvw);
+          font-size: 15px;
+          min-width: 117vw;
+          min-height: 30vh;
+         }
+         .calculator{
+          margin-right: 0;
+          height: 85vw;
+          font-size: 3vw;
+        }
+        .container{
+         width: 60vw;
+         height: 40vw;
+         font-size: 5vw;
+        }
+        input[type="number"] {
+          width: 15vw;
+          height: 6vw;
+        }
+        input[type="button"] {
+          width: 25vw;
+          height: 7vw;
+          color: rgb(50, 0, 0);
+          font-size: 4vw;
+        }
+        .contact{
+          background-size: cover;
+          min-width: 110% ;
+          height: 32.5dvw;
+          font-size: clamp(2dvw,2dvw + 15px,3dvw);
+        }
+        .manual-button{
+          margin: -2px;;
+          padding: 4px;
+          margin-left: 20px;
+          margin-right: 20px;
+
+        }
+      }
+      @media (max-width: 275px){
+        .meniu{
+          font-size: 6px;
+        }
+        .mail{
+          font-size: 5px;
+        padding-left: 2px;
+        margin-top: 12.5px;
+        }
+        .phone{
+          font-size: 5px;
+          padding-top: 7px;
+        }
+        .despre{
+          min-width: 135vw;
+          font-size: 5vw;
+        }
+        .contact{
+          min-width: 130% ;
+          height: 37.5dvw;
+          font-size: clamp(2dvw,2dvw + 15px,3dvw);
+        }
+      }
+      
